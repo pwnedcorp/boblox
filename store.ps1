@@ -36,7 +36,7 @@ $CurrentPackage = 1
 $TotalPackages = $Packages.Count
 foreach ($Package in $Packages) {
     echo "Downloading '$Package' ($CurrentPackage/$TotalPackages)..."
-    Invoke-WebRequest -Uri "$BaseRepoURL/$Package" -OutFile "$BaseFilePath\$Package"
+    Invoke-WebRequest -Uri "$BaseRepoURL/$Package" -OutFile $Package
     $CurrentPackage += 1
 }
 
